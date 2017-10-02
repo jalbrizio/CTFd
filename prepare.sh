@@ -35,6 +35,12 @@ python /usr/local/src/setuptools-36.5.0/easy_install.py -U setuptools
 pip install --upgrade pip
 pip install -r python-freez2.txt
 pip install -r requirements.txt
+#
+# if you want to allow ssh through firewalld uncomment the next 2 lines.
+
+#firewall-cmd --permanent --add-port=22/tcp
+#firewall-cmd --reload
+
 else
 # if neither apt or yum are installed, or there is some other error that doesnt print properly, print the output of the variables. 
 echo "neither apt or yum are being used"
